@@ -26,7 +26,7 @@
 
     <form action="search.php" method="post">
     <input type="hidden" id="email" name="email" value="<?php echo $receivedEmail; ?>">
-        <input type="submit" value="Search" class="button" style="left: 45%;">
+        <input type="submit" value="Browse" class="button" style="left: 45%;">
     </form>
     
 

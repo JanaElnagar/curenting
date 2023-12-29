@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="form-holder">
-  <h1 class = "search_header" style=" text-align: center"> Search Available Cars </h1>
+  <h1 class = "search_header" style=" text-align: center"> Search Cars </h1>
   <form  method="post">
     <label for="model">Model:</label>  
     <input type="text" id="model" name="model" class="input"><br></br>  
@@ -107,7 +107,7 @@ if (isset($_POST['model']) && isset($_POST['year']) && isset($_POST['color'])){
 $conn->close();
 
 ?>
-
+<!--
 <div class="form-holder2">
 <h1 class = "rent_header" style=" text-align: center"> Confirming </h1>
     <form action="check_availability.php" method="post">
@@ -120,7 +120,7 @@ $conn->close();
         <!--
         <label for="days">Number of days (if available): </label>
         <input type="text",id="d" name="days" >
-        -->
+        
 
         <input type="hidden" name="email" value="<?php echo $receivedEmail; ?>">
         <br></br>
@@ -128,7 +128,7 @@ $conn->close();
     
     </form>
 </div>
-
+-->
 
     <?php
     if (isset($_GET['warning'])) {
