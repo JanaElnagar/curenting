@@ -55,7 +55,7 @@
             }
             else{
                 echo "data not inserted 3".mysqli_error($conn);
-                header("location:carsoption.php?warning=car not rented&email=$receivedEmail");
+                header("location:customercars.php?warning=car not rented&email=$receivedEmail");
             }
         }
         $conn->close();
