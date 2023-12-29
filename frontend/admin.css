@@ -56,12 +56,12 @@ body{
   }
 
   .message {
-    color: rgb(7, 88, 20); /* Red text for attention */
+    color: rgb(7, 88, 20); 
     font-weight: bold; /* Bold for emphasis */
     text-align: center; /* Centered for visual clarity */
     padding: 10px; /* Add some padding for space */
     border: 1px solid rgb(0, 255, 42); /* Optional border for visual distinction */
-    background-color: #ffe5e5; /* Optional light red background */
+    background-color: #e5ffe887; 
   }
 
 /* .option {
