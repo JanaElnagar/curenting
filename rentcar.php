@@ -15,7 +15,7 @@
 ?>
 
     <br><br><br><br><br>
-    <p class="header">  Curenting <br>Rent Your Car Now</p>
+    <p class="header">&nbsp;Curenting <br>&nbsp;Rent Your Car Now</p>
     
     <div class="button-container">
     <form action="carsoption.php" method="post">
