@@ -52,21 +52,21 @@
                             }
                         }
                         else{
-                            header("location:carsoption.php?warning=Error renting car&email=$receivedEmail");
+                            header("location:search.php?warning=we're%20not%20serving%20this%20car&email=" . urlencode($receivedEmail));
                         }
                     }
                     else{
-                        header("location:carsoption.php?warning=Error renting car&email=$receivedEmail");
+                        header("location:search.php?warning=we're%20not%20serving%20this%20car&email=" . urlencode($receivedEmail));
                     }
                 }
                 else{
                     //echo "data not not inserted".mysqli_error($conn);
-                    header("location:carsoption.php?warning=not%20available&email=$receivedEmail");
+                    header("location:search.php?warning=we're%20not%20serving%20this%20car&email=" . urlencode($receivedEmail));
                 }             
             }
             else{
                 //echo "data not inserted".mysqli_error($conn);
-                header("location:carsoption.php?warning=we're%20not%20serving%20this%20car&email=$receivedEmail");
+                header("location:search.php?warning=we're%20not%20serving%20this%20car&email=" . urlencode($receivedEmail));
             }
         }
         $conn->close();
