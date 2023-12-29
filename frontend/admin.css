@@ -46,6 +46,24 @@ body{
     bottom: 200px;
   }
 
+  .warning {
+    color: #f00; /* Red text for attention */
+    font-weight: bold; /* Bold for emphasis */
+    text-align: center; /* Centered for visual clarity */
+    padding: 10px; /* Add some padding for space */
+    border: 1px solid #f00; /* Optional border for visual distinction */
+    background-color: #ffe5e5; /* Optional light red background */
+  }
+
+  .message {
+    color: rgb(7, 88, 20); /* Red text for attention */
+    font-weight: bold; /* Bold for emphasis */
+    text-align: center; /* Centered for visual clarity */
+    padding: 10px; /* Add some padding for space */
+    border: 1px solid rgb(0, 255, 42); /* Optional border for visual distinction */
+    background-color: #ffe5e5; /* Optional light red background */
+  }
+
 /* .option {
     padding: 8px 12px;
     border: 0;
