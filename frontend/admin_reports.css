@@ -27,7 +27,7 @@ body {
     border-radius: 10px;
     box-shadow: 0px 3px 10px -2px rgba(5, 5, 5, 0.2);
     height: 60%;
-    opacity: 0.70;
+    opacity: 0.85;
   }
   .form-holder3 {
     max-width: 60em;
@@ -37,7 +37,7 @@ body {
     border-radius: 10px;
     box-shadow: 0px 3px 10px -2px rgba(5, 5, 5, 0.2);
     height: 25%;
-    opacity: 0.70;
+    opacity: 0.85;
     display: flex;
   flex-direction: column;
   align-items: center;
