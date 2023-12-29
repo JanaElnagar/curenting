@@ -56,3 +56,12 @@ header {
    opacity: 0.95;
    text-align: center;
 }
+
+.warning {
+   color: #f00; /* Red text for attention */
+   font-weight: bold; /* Bold for emphasis */
+   text-align: center; /* Centered for visual clarity */
+   padding: 10px; /* Add some padding for space */
+   border: 1px solid #f00; /* Optional border for visual distinction */
+   background-color: #ffe5e5; /* Optional light red background */
+ }
