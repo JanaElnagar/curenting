@@ -18,18 +18,18 @@
             $receivedEmail = $_GET["email"];
         }
         ?>
-        <br>
+        <br><br><br>
     <p class="header">&nbsp;Curenting </p>
     <div class="button-container">
     <form action="addcar.php" method="post">
 
-                <input type="submit" value="Add a new car" class="button" style="left:15%">
+                <input type="submit" value="Add a New Car" class="button" style="left:15%">
                 <input type="hidden" id="email" name="email"   value="<?php echo $receivedEmail; ?>">
     </form>
     <form action="change.php" method="post">
 
                 <!-- <input type="submit" value="Change a current car status" class="button" style="left:55%"> -->
-                <button  class="button" style="left:55%">Change a current<br>car status</button>
+                <button  class="button" style="left:55%">Change Car Status</button>
                 <input type="hidden" id="email" name="email"   value="<?php echo $receivedEmail; ?>">
                 <br>
     </form>
