@@ -18,7 +18,7 @@
             $receivedEmail = $_GET["email"];
         }
         ?>
-        <br>
+        <br><br><br>
     <p class="header">&nbsp;Curenting </p>
     <div class="button-container">
     <form action="addcar.php" method="post">
@@ -29,7 +29,7 @@
     <form action="change.php" method="post">
 
                 <!-- <input type="submit" value="Change a current car status" class="button" style="left:55%"> -->
-                <button  class="button" style="left:55%">Change a Current<br>Car Status</button>
+                <button  class="button" style="left:55%">Change Car Status</button>
                 <input type="hidden" id="email" name="email"   value="<?php echo $receivedEmail; ?>">
                 <br>
     </form>
