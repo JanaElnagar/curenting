@@ -44,7 +44,7 @@ body {
 }
 
 .button {
-    width: 100%;
+    width: 50%;
     padding: 0.7em;
     line-height: 1;
     background-color: #f9f9f9;
@@ -54,3 +54,11 @@ body {
     font-size: 16px;  
    
 }
+.warning {
+    color: #f00; /* Red text for attention */
+    font-weight: bold; /* Bold for emphasis */
+    text-align: center; /* Centered for visual clarity */
+    padding: 10px; /* Add some padding for space */
+    border: 1px solid #f00; /* Optional border for visual distinction */
+    background-color: #ffe5e5; /* Optional light red background */
+  }

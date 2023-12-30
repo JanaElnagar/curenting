@@ -66,15 +66,15 @@
             <input type="hidden" id="email" name="email"  class="input" value="<?php echo $receivedEmail; ?>">
             <input type="hidden" id="reservation_id" name="reservation_id"  class="input" value="<?php echo $reservation_id; ?>">
 
-            <label for="card_number">Card Number:</label>
+            <label for="card_number">Card Number:</label><br>
             <input type="text" id="card_number" name="card_number"  class="input" required>
-
-            <label for="expiration_date">Expiration Date (MM/YY):</label>
+            <br>
+            <label for="expiration_date">Expiration Date (MM/YY):</label><br>
             <input type="text" id="expiration_date" name="expiration_date"  class="input" required>
-
-            <label for="cvv">CVV:</label>
+            <br>
+            <label for="cvv">CVV:</label><br>
             <input type="text" id="cvv" name="cvv"  class="input" required>
-
+        <br><br>
             <button type="submit" class="button">Pay Now</button>
         </form>
         <?php

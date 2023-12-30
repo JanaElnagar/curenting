@@ -75,7 +75,7 @@
 
         <input type="hidden" name="email" value="<?php echo $receivedEmail; ?>">
         <br><br>
-        <input type="submit" value="Rent it">
+        <input type="submit" class="button" style="width:100px" value="Rent it">
     
     </form>
     <?php

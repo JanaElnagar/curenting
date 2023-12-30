@@ -44,7 +44,7 @@ body {
 }
 
 .button {
-    width: 100%;
+    width: 40%;
     padding: 0.7em;
     line-height: 1;
     background-color: #f9f9f9;
@@ -52,6 +52,7 @@ body {
     border-radius: 3px;
     font-weight: bold;  
     font-size: 19px;  
+    text-align: left;
    
 }
 
