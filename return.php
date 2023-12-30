@@ -29,7 +29,7 @@
                     $cid= $row['car_id'];
                     $sd= $row['reservation_date'];
                     $rd= $row['return_date']; // currently null, must udate it to = $return_date
-                    if (strtotime($return_date) < strtotime($sd))
+                    if (strtotime($return_date) <= strtotime($sd))
                     {
                         header("location:customercars.php?warning=Invalid Date&email=$receivedEmail");
                     }
