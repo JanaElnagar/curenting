@@ -29,22 +29,29 @@
                     $cid= $row['car_id'];
                     $sd= $row['reservation_date'];
                     $rd= $row['return_date']; // currently null, must udate it to = $return_date
-                    $days = floor (strtotime($return_date) - strtotime($sd)) / (60 * 60 * 24);// compute total days by subtracting return date and start date
-                    $tp= $row['price_per_day']*$days;
-
-
-                    
-                    $c="UPDATE car
-                    SET status = 'active'
-                    WHERE car_id = $cid";
-                    $p="UPDATE reservation
-                    SET return_date = '$return_date', total_price = $tp, reservation_status = 'returned'
-                    WHERE reservation_id = $rid";
-                    if (mysqli_query($conn, $c) && mysqli_query($conn, $p)) {
-                        header("location:payment.php?email=$receivedEmail&reservation_id=$reservation_id");
+                    if (strtotime($return_date) < strtotime($sd))
+                    {
+                        header("location:customercars.php?warning=Invalid Date&email=$receivedEmail");
                     }
                     else{
-                        echo "Failed to update car and reservation: " . mysqli_error($conn);
+
+                        $days = floor (strtotime($return_date) - strtotime($sd)) / (60 * 60 * 24);// compute total days by subtracting return date and start date
+                        $tp= $row['price_per_day']*$days;
+
+
+                        
+                        $c="UPDATE car
+                        SET status = 'active'
+                        WHERE car_id = $cid";
+                        $p="UPDATE reservation
+                        SET return_date = '$return_date', total_price = $tp, reservation_status = 'returned'
+                        WHERE reservation_id = $rid";
+                        if (mysqli_query($conn, $c) && mysqli_query($conn, $p)) {
+                            header("location:payment.php?email=$receivedEmail&reservation_id=$reservation_id");
+                        }
+                        else{
+                            echo "Failed to update car and reservation: " . mysqli_error($conn);
+                        }
                     }
                       
                 }
