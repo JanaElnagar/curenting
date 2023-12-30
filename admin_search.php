@@ -32,7 +32,7 @@ if (isset($_POST['search'])) {
 
     // Execute query and display results
     $result = $conn->query($sql);
-
+    echo "<div class='form-holder2' >";
     if ($result->num_rows > 0) {
         echo "<table>";
         echo "<thead>";
@@ -90,6 +90,8 @@ if (isset($_POST['search'])) {
     } else {
         echo "No results found.";
     }
+    echo "</div>";
+    echo "<br><br><br><br>";
 }
 
 ?>

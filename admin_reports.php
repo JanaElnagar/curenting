@@ -3,6 +3,8 @@
 <html>
 <head>
 <title>Admin Reports</title>
+<link rel="stylesheet" href="frontend/admin_reports.css">
+
 <script>
         function showFields() {
             var selectedOption = document.getElementById("reportType").value;
@@ -39,11 +41,12 @@
     </script>
 </head>
 <body>
+<div class="form-holder" >
 <h1>Admin Reports</h1>
 
 <form  method="post" >
     <label for="reportType">Select Report:</label>
-    <select id="reportType" name="reportType" onchange="showFields()">
+    <select id="reportType" name="reportType" class="input" onchange="showFields()">
         <option disabled selected value="">Select option</option>
         <option value="all_reservations">All Reservations within Period</option>
         <option value="car_reservations">Car Reservations within Period</option>
@@ -62,12 +65,12 @@
 
     <div id="reportOptions"></div>
 
-
-    <button type="submit" name="generateReport">Generate Report</button>
-
+        <br>
+    <button type="submit" name="generateReport" class="button" style="width:200px;">Generate Report</button>
+<br><br>
     <li><a href="admin.php">Return to Home Page</a></li>
 </form>
-
+</div>
 
 
 <?php
@@ -140,6 +143,7 @@ else{
 
     // Execute query and display results
     $result = $conn->query($sql);
+    echo "<div class='form-holder3' >";
     if ($result->num_rows > 0) {
         echo "<table>";
         echo "<table cellspacing='20'>";
@@ -281,6 +285,8 @@ else{
     else {
         echo "No results found.";
     }
+    echo "</div>";
+    ;
 }
 }
 

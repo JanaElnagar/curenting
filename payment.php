@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frontend/payment.css">
     <title>Payment</title>
 </head>
 <body>
+<div class="form-holder" >
     <?php
    // $total_price = $_GET['total_price']; // Retrieve total price from URL
     if(isset($_POST["email"])){
@@ -60,20 +62,20 @@
         ?>
         
         <form action="process_payment.php" method="post">
-            <input type="hidden" name="total_price" value="<?php echo $total_price; ?>">
-            <input type="hidden" id="email" name="email" value="<?php echo $receivedEmail; ?>">
-            <input type="hidden" id="reservation_id" name="reservation_id" value="<?php echo $reservation_id; ?>">
+            <input type="hidden" name="total_price"  class="input" value="<?php echo $total_price; ?>">
+            <input type="hidden" id="email" name="email"  class="input" value="<?php echo $receivedEmail; ?>">
+            <input type="hidden" id="reservation_id" name="reservation_id"  class="input" value="<?php echo $reservation_id; ?>">
 
             <label for="card_number">Card Number:</label>
-            <input type="text" id="card_number" name="card_number" required>
+            <input type="text" id="card_number" name="card_number"  class="input" required>
 
             <label for="expiration_date">Expiration Date (MM/YY):</label>
-            <input type="text" id="expiration_date" name="expiration_date" required>
+            <input type="text" id="expiration_date" name="expiration_date"  class="input" required>
 
             <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" required>
+            <input type="text" id="cvv" name="cvv"  class="input" required>
 
-            <button type="submit">Pay Now</button>
+            <button type="submit" class="button">Pay Now</button>
         </form>
         <?php
     } else {
@@ -89,6 +91,6 @@
 
     ?>
 
-    
+    </div>
 </body>
 </html>
