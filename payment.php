@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="frontend/payment.css">
     <title>Payment</title>
+    <link rel="stylesheet" href="frontend/payment.css">
 </head>
 <body>
-<div class="form-holder" >
+    <div class = "form-holder">
     <?php
    // $total_price = $_GET['total_price']; // Retrieve total price from URL
     if(isset($_POST["email"])){
@@ -57,25 +57,27 @@
     $conn->close();
 
     if (isset($total_price)) {
-        echo "<h2>Total Price: $total_price</h2>";
+        echo "<h2>Total Price = $total_price</h2>";
         // Add payment processing functionality here (e.g., using a payment gateway)
         ?>
         
         <form action="process_payment.php" method="post">
-            <input type="hidden" name="total_price"  class="input" value="<?php echo $total_price; ?>">
-            <input type="hidden" id="email" name="email"  class="input" value="<?php echo $receivedEmail; ?>">
-            <input type="hidden" id="reservation_id" name="reservation_id"  class="input" value="<?php echo $reservation_id; ?>">
+            <input type="hidden" name="total_price" value="<?php echo $total_price; ?>">
+            <input type="hidden" id="email" name="email" value="<?php echo $receivedEmail; ?>">
+            <input type="hidden" id="reservation_id" name="reservation_id" value="<?php echo $reservation_id; ?>">
+            </div><br></br>
+            <div class = "form-holder2">
+            <label for="card_number">Card Number:</label>
+            <input type="text" id="card_number" name="card_number" class = "input" required><br></br>
 
-            <label for="card_number">Card Number:</label><br>
-            <input type="text" id="card_number" name="card_number"  class="input" required>
-            <br>
-            <label for="expiration_date">Expiration Date (MM/YY):</label><br>
-            <input type="text" id="expiration_date" name="expiration_date"  class="input" required>
-            <br>
-            <label for="cvv">CVV:</label><br>
-            <input type="text" id="cvv" name="cvv"  class="input" required>
-        <br><br>
-            <button type="submit" class="button">Pay Now</button>
+            <label for="expiration_date">Expiration Date (MM/YY):</label>
+            <input type="text" id="expiration_date" name="expiration_date" class = "input" required><br></br>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" class = "input" required><br></br>
+
+            <button type="submit" class="button" style="width: 105%;cursor: pointer;">Pay Now</button>
+    </div>
         </form>
         <?php
     } else {
@@ -91,6 +93,6 @@
 
     ?>
 
-    </div>
+
 </body>
 </html>

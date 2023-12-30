@@ -71,6 +71,8 @@
     <li><a href="admin.php">Return to Home Page</a></li>
 </form>
 </div>
+<br></br>
+
 
 
 <?php
@@ -143,7 +145,7 @@ else{
 
     // Execute query and display results
     $result = $conn->query($sql);
-    echo "<div class='form-holder3' >";
+    echo "<div class='form-holder3'>";
     if ($result->num_rows > 0) {
         echo "<table>";
         echo "<table cellspacing='20'>";
@@ -286,9 +288,11 @@ else{
         echo "No results found.";
     }
     echo "</div>";
-    ;
+    echo "<br></br>";
+    
 }
 }
+
 
 ?>
 

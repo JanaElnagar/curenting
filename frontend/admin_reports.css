@@ -6,13 +6,10 @@ body {
     width: 100%;
     height: 100%;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
     margin: 0;
     box-sizing: border-box;
-} 
+}
 
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans");
 
@@ -20,33 +17,28 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.form-holder {
+.form-holder,
+.form-holder3 {
     max-width: 25em;
     padding: 1em 3em 2em 3em;
     margin: auto;
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0px 3px 10px -2px rgba(5, 5, 5, 0.2);
+    opacity: 0.85;
+    display: block; /* Ensure they behave as block-level elements */
+}
+
+.form-holder {
     min-height: 50px;
     resize: vertical;
-    opacity: 0.85;
-  }
+}
+
 .form-holder3 {
-    max-width: 60em;
-    padding: 1em 3em 2em 3em;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    box-shadow: 0px 3px 10px -2px rgba(5, 5, 5, 0.2);
-    height: 25%;
-    opacity: 0.85;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    bottom:0;
-   
-  }
-
-
+    max-width: 80em;
+    height: 60%;
+    margin-top: 20px; /* Adjust as needed to add space between the two form-holders */
+}
 
 .input {
     width: 70%;
@@ -55,7 +47,6 @@ body {
     background-color: #f9f9f9;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
-   
 }
 
 .button {
@@ -67,5 +58,4 @@ body {
     border-radius: 3px;
     font-weight: bold;  
     font-size: 16px;  
-   
 }
