@@ -1,3 +1,12 @@
+<?php
+if(isset($_POST["email"])){
+    $receivedEmail = $_POST["email"];
+}
+else if(isset($_GET["email"])){
+    $receivedEmail = $_GET["email"];
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,18 +27,24 @@
     <label for="color">Color:</label>
     <input type="text" id="color" name="color" class="input"><br></br>
 
-    <button type="submit" class="button" style="width: 105%;cursor: pointer;">Search</button>
+    <input type="hidden" id="email" name="email"   value="<?php echo $receivedEmail; ?>">
+    <button type="submit" class="button" style="width: 105%;cursor: pointer;" >Search</button>
   </form>
+  
+<li><a href="rentcar.php?email=<?php echo $receivedEmail; ?>">Return to Home Page</a></li>
 </div>
 <br></br>
 
+
+
 <?php
     if(isset($_POST["email"])){
-            $receivedEmail = $_POST["email"];
-        }
-        else if(isset($_GET["email"])){
-            $receivedEmail = $_GET["email"];
-        }
+        $receivedEmail = $_POST["email"];
+    }
+    else if(isset($_GET["email"])){
+        $receivedEmail = $_GET["email"];
+    }
+
 
 
 // Connect to your database
@@ -129,6 +144,30 @@ $conn->close();
     </form>
 </div>
 -->
+
+<div class="form-holder2">
+<h1 class = "rent_header" style=" text-align: center"> Confirming </h1>
+    <form action="check_availability.php" method="post">
+        <label for="rent">Write down your desired car ID: </label>
+        <input type="text",id="r" name="rent" placeholder="ID" required>
+
+
+        <label for="start_date">Day of pickup: </label>
+        <input type="date",id="sd" name="start_date" class="input" required>
+
+        <!--
+        <label for="days">Number of days (if available): </label>
+        <input type="text",id="d" name="days" >
+        -->
+
+        <input type="hidden" name="email" value="<?php echo $receivedEmail; ?>">
+        <br></br>
+        <input type="submit" value="Rent it" class="button" style="width: 105%;cursor: pointer;">
+    
+    </form>
+</div>
+
+
 
     <?php
     if (isset($_GET['warning'])) {

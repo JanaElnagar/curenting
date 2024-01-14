@@ -7,6 +7,15 @@ $total_price = $_POST['total_price'];
 $receivedEmail = $_POST['email'];
 $reservation_id = $_POST['reservation_id'];
 
+//echo $expiration_date . "<br>";
+$month_and_year = explode("/", $expiration_date);
+if(strlen($month_and_year[0]) < 2){
+    //echo $expiration_date . "<br>";
+if(strlen($month_and_year[1]) < 2)
+    $month_and_year[1] = "0" . $month_and_year[1];
+    //echo $expiration_date . "<br>";
+}
+
 // **Basic validation**
 if (empty($card_number) || empty($expiration_date) || empty($cvv)) {
     // Redirect to payment.php with an error message
@@ -22,8 +31,11 @@ if (!preg_match("/^\d{16}$/", $card_number)) {
 }
 
 // **Expiration date validation**
-$expiration_month = substr($expiration_date, 0, 2);
-$expiration_year = "20" . substr($expiration_date, 3, 2); // Assuming two-digit year
+//$expiration_month = substr($expiration_date, 0, 2);
+//$expiration_year = "20" . substr($expiration_date, 3, 2); // Assuming two-digit year
+$ghbjnm;
+$expiration_month = $month_and_year[0];
+$expiration_year = $month_and_year[1];
 if (!checkdate($expiration_month, 1, $expiration_year)) {
     // Redirect to payment.php with an error message
     header("Location: payment.php?error=invalid_expiration_date&email=$receivedEmail&reservation_id=$reservation_id");

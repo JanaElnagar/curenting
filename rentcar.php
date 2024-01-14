@@ -9,8 +9,11 @@
 <body>
 
 <?php
-        if($_GET["email"])
+        if(isset($_GET["email"]))
         $receivedEmail = $_GET["email"];
+        else if(isset($_GET["email"])){
+            $receivedEmail = $_GET["email"];
+        }
 
 ?>
 
